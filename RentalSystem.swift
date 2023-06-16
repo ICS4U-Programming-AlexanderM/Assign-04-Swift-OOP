@@ -45,7 +45,7 @@ class Vehicle {
 
   // Drive method.
   // Determines if the rented vehicle was damaged.
-  func drive() -> Bool {
+  func getDamage() -> Bool {
     var isDamaged = false
 
     // Chance of damage has been augmented for testing purposes.
@@ -102,7 +102,7 @@ class Rental {
     var costString: String
 
     // Check if the vehicle was damaged.
-    if self._vehicle.drive() {
+    if self._vehicle.getDamage() {
       // Add repair fees.
       cost = self._vehicle._BASECOST + (self._customer._length * self._vehicle._multiplier) + self._DAMAGECHARGE
       costString = "Due to repair fees, $" + "\(cost)"
